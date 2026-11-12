@@ -506,7 +506,7 @@
         </h1>
 
         <p class="text-xs sm:text-[13.5px] text-slate-400 leading-relaxed max-w-2xl">
-          An interactive observatory of the verifiable-intelligence loop (<span class="font-mono text-slate-200">formalize → search → verify → reward → learn</span>). A softmax policy network <span class="font-mono text-indigo-300">πθ(a | s)</span> proposes Lean 4 proof tactics; a deterministic ~2,000-line kernel checks each line against 3 axioms; and exact binary rewards <span class="font-mono text-emerald-300">r ∈ {−1, +1}</span> update the policy without human proxy bias or reward hacking.
+          An interactive observatory of the verifiable-intelligence loop (<span class="font-mono text-slate-200">formalize → search → verify → reward → learn</span>). A softmax policy network <span class="font-mono text-indigo-300">πθ(a | s)</span> proposes Lean 4 proof tactics; a deterministic, few-thousand-line kernel checks every line against 3 axioms; and exact binary rewards <span class="font-mono text-emerald-300">r ∈ {−1, +1}</span> update the policy without human proxy bias or reward hacking.
         </p>
 
         <!-- Interactive 4-Theorem Benchmark Selector Tabs -->
@@ -604,7 +604,7 @@
         <div id="pipe-3" class="recipe-step rounded-xl px-3.5 py-2.5">
           <div class="flex items-center justify-between font-mono text-[10px] tracking-wider text-slate-400">
             <span class="font-semibold">03 VERIFY</span>
-            <span class="text-amber-400">~2K LOC</span>
+            <span class="text-amber-400">≤5K LOC</span>
           </div>
           <div class="font-mono text-xs font-semibold text-slate-100 mt-1">Kernel Type-Check</div>
           <p class="text-[11px] text-slate-400 leading-snug mt-0.5">Deterministic kernel checks term against goal state.</p>
@@ -773,7 +773,7 @@
               <rect class="svg-box" x="666" y="116" width="228" height="142" rx="10" />
               <text class="svg-title" x="678" y="135">VERIFIER · LEAN 4 KERNEL</text>
               <text class="svg-dim" x="678" y="155">axioms: <tspan fill="#CBD5E1">propext · choice · quot</tspan></text>
-              <text class="svg-dim" x="678" y="173">trusted kernel: <tspan fill="#CBD5E1">~2,000 LOC</tspan></text>
+              <text class="svg-dim" x="678" y="173">trusted kernel: <tspan fill="#CBD5E1">few thousand LOC</tspan></text>
               <text class="svg-dim" x="678" y="195">check: <tspan id="v-line" fill="#FBBF24">—</tspan></text>
               <rect class="ap-track" x="786" y="188" width="96" height="6" rx="3" />
               <rect id="vbar" x="786" y="188" width="0" height="6" rx="3" fill="#FBBF24" />
@@ -1071,7 +1071,7 @@
               <dd class="text-slate-200 mt-0.5 leading-snug font-mono text-[10.5px]">propext · Classical.choice · Quot.sound</dd>
             </div>
             <div class="pb-1.5 border-b border-slate-800/75">
-              <dt class="font-mono text-[9.5px] font-semibold uppercase tracking-wider text-slate-400">Trusted Kernel (~2,000 LOC)</dt>
+              <dt class="font-mono text-[9.5px] font-semibold uppercase tracking-wider text-slate-400">Trusted Kernel (few thousand LOC)</dt>
               <dd class="text-slate-300 mt-0.5 leading-snug">Independent type-checker verifies proof terms from first principles; neural search is untrusted.</dd>
             </div>
             <div>
@@ -1121,7 +1121,7 @@
               </div>
               <div class="font-mono text-[10px] text-slate-500 mt-0.5">Evolutionary Program Search</div>
               <p class="text-[11.5px] text-slate-300 leading-relaxed mt-1.5">
-                Discovered a <strong class="text-emerald-400 font-semibold">512-point cap-set</strong> in <span class="font-mono text-slate-200">𝔽₃⁸</span> (beating 496) and raised the asymptotic lower bound <span class="font-mono">2.2180 → 2.2202</span> — first improvement in 20 years.
+                Discovered a <strong class="text-emerald-400 font-semibold">512-point cap-set</strong> in <span class="font-mono text-slate-200">𝔽₃⁸</span> (beating 496) and raised the asymptotic lower bound <span class="font-mono">2.2180 → 2.2202</span> — the largest improvement in the bound in 20 years.
               </p>
             </div>
 
@@ -1132,7 +1132,7 @@
               </div>
               <div class="font-mono text-[10px] text-slate-500 mt-0.5">Neuro-Symbolic Deduction Engine</div>
               <p class="text-[11.5px] text-slate-300 leading-relaxed mt-1.5">
-                Solved <strong class="text-emerald-400 font-semibold">84%</strong> of IMO geometry problems (2000–2024), solving IMO 2025 Problem P2 in <strong class="text-amber-300 font-semibold">~19 seconds</strong>.
+                Solved <strong class="text-emerald-400 font-semibold">84%</strong> of IMO geometry problems (2000–2024), and proved the IMO 2024 geometry problem (P4) in <strong class="text-amber-300 font-semibold">just 19 seconds</strong>.
               </p>
             </div>
 
@@ -1196,7 +1196,7 @@
         ASWATHRAM K · BL.AI.U4AID26007 · MATHEMATICS FOR INTELLIGENT SYSTEMS 1 · AI-DS 2026
       </div>
       <div class="text-slate-500 text-[10px]">
-        Romera-Paredes et al., Nature 625 (2023) · Trinh et al., Nature 625 (2023) · Hubert, Mehta, Sartran et al., Nature 651 (2025)
+        Romera-Paredes et al., Nature 625 (2023) · Trinh et al., arXiv:2502.03544 (2025) · Hubert, Mehta, Sartran et al., Nature 651 (2025)
       </div>
     </footer>
 
