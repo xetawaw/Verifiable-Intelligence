@@ -204,6 +204,48 @@
   .trust .tv{color:var(--lav-soft)}
   .trust .tv b{color:var(--mint);font-weight:400}
 
+  /* ---------- meta strip ---------- */
+  .meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.26em;color:rgba(141,124,174,.9);
+    padding:12px 4px;border-bottom:1px solid var(--line);margin-bottom:30px}
+  .meta b{color:var(--lav-soft);font-weight:400}
+  .meta .id{color:var(--mint)}
+
+  /* ---------- recipe pipeline ---------- */
+  .pipe-cap{font-family:var(--mono);font-size:10px;letter-spacing:.4em;color:var(--mut);margin:0 0 12px 2px}
+  .pipe-cap b{color:var(--lav-soft);font-weight:400}
+  .pipe{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+  .pstep{flex:1;min-width:168px;border:1px solid var(--line);border-radius:14px;padding:13px 15px;
+    background:rgba(19,9,38,.45);transition:all .5s cubic-bezier(.2,.8,.2,1);position:relative}
+  .pstep .num{font-family:var(--mono);font-size:9px;letter-spacing:.3em;color:var(--mut)}
+  .pstep .t{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--lav-soft);margin:5px 0 5px}
+  .pstep .d{font-size:10.5px;color:var(--mut);line-height:1.5}
+  .pstep.on{border-color:rgba(177,140,255,.65);background:rgba(45,25,80,.55);
+    box-shadow:0 0 26px rgba(109,45,147,.4), inset 0 0 22px rgba(177,140,255,.1);transform:translateY(-3px)}
+  .pstep.on .t{color:#fff}
+  .pstep.on-ok{border-color:rgba(110,240,180,.6);box-shadow:0 0 26px rgba(110,240,180,.25), inset 0 0 22px rgba(110,240,180,.08)}
+  .pstep.on-ok .t{color:var(--mint)}
+  .pstep.on-fail{border-color:rgba(255,107,138,.6);box-shadow:0 0 26px rgba(255,107,138,.25), inset 0 0 22px rgba(255,107,138,.08)}
+  .pstep.on-fail .t{color:var(--coral)}
+
+  /* ---------- explain row ---------- */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+  @media (max-width:900px){.grid2{grid-template-columns:1fr}}
+  .xlist{font-family:var(--mono);font-size:10.5px;line-height:1.55}
+  .xlist .xrow{padding:8px 0;border-bottom:1px solid rgba(177,140,255,.1);display:flex;gap:10px}
+  .xlist .xrow:last-child{border-bottom:none}
+  .xlist .xm{flex:0 0 14px;text-align:center}
+  .xlist .xt{color:var(--lav-soft)}
+  .xlist .xt b{color:var(--ink);font-weight:600}
+  .xlist .xd{color:var(--mut)}
+  .rlist{font-size:11px;line-height:1.6}
+  .rlist .rrow{padding:9px 0;border-bottom:1px solid rgba(177,140,255,.1)}
+  .rlist .rrow:last-child{border-bottom:none}
+  .rlist .rn{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--lav-soft);font-weight:600}
+  .rlist .rn em{font-style:normal;color:var(--mut);font-weight:400;letter-spacing:.04em}
+  .rlist .rd{color:var(--mut);margin-top:2px}
+  .rlist .rd b{color:var(--mint);font-weight:600}
+
   /* ---------- feed ---------- */
   .feed{margin-top:20px;border:1px solid var(--line);border-radius:20px;background:var(--panel);backdrop-filter:blur(12px);padding:20px 22px}
   .feed h3{font-family:var(--mono);font-size:10.5px;letter-spacing:.36em;color:var(--lav-soft);margin-bottom:14px;font-weight:400}
@@ -229,6 +271,11 @@
     <div class="pill clock"><span id="t-clock">T+00:00:00</span></div>
   </div>
 
+  <div class="meta rev" style="animation-delay:.1s">
+    <span><b>PROJECT</b> — VERIFIABLE INTELLIGENCE · AN INTERACTIVE MODEL</span>
+    <span>ASWATHRAM K · <span class="id">BL.AI.U4AID26007</span> · MATHEMATICS FOR INTELLIGENT SYSTEMS 1 · AI-DS 2026</span>
+  </div>
+
   <div class="kicker rev" style="animation-delay:.15s">MATHEMATICS FOR INTELLIGENT SYSTEMS 1 <span>//</span> AN INTERACTIVE PROOF OF CONCEPT</div>
   <div class="hero">
     <h1 class="rev" style="animation-delay:.25s">The agent proposes.<br><span class="grad">The machine proves.</span></h1>
@@ -249,6 +296,38 @@
     <div class="track">
       <span>FORMALIZE ✦ SEARCH ✦ VERIFY ✦ REWARD ✦ LEARN ✦ FORMALIZE ✦ SEARCH ✦ VERIFY ✦ REWARD ✦ LEARN ✦ &nbsp;</span>
       <span>FORMALIZE ✦ SEARCH ✦ VERIFY ✦ REWARD ✦ LEARN ✦ FORMALIZE ✦ SEARCH ✦ VERIFY ✦ REWARD ✦ LEARN ✦ &nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ================= RECIPE PIPELINE ================= -->
+  <div class="rev" style="animation-delay:.8s">
+    <div class="pipe-cap">THE RECIPE — <b>THIS ANIMATION REPLAYS THESE FIVE STEPS, LIVE</b></div>
+    <div class="pipe">
+      <div class="pstep" id="pipe-1">
+        <div class="num">STEP 01</div>
+        <div class="t">FORMALIZE</div>
+        <div class="d">The problem is written in Lean 4 — machine-readable mathematics, built on 3 declared axioms.</div>
+      </div>
+      <div class="pstep" id="pipe-2">
+        <div class="num">STEP 02</div>
+        <div class="t">SEARCH</div>
+        <div class="d">The agent samples a tactic for the current proof line from its learned policy πθ(a | s).</div>
+      </div>
+      <div class="pstep" id="pipe-3">
+        <div class="num">STEP 03</div>
+        <div class="t">VERIFY</div>
+        <div class="d">The Lean kernel checks the line against the previous lines — a mechanical, line-by-line decision.</div>
+      </div>
+      <div class="pstep" id="pipe-4">
+        <div class="num">STEP 04</div>
+        <div class="t">REWARD</div>
+        <div class="d">An exact signal r ∈ {−1, +1} — no noise, no human, no proxy. Acceptance is the definition of success.</div>
+      </div>
+      <div class="pstep" id="pipe-5">
+        <div class="num">STEP 05</div>
+        <div class="t">LEARN</div>
+        <div class="d">Policy-gradient update π ← π + η·r·∇log π — tactics that verify become more likely.</div>
+      </div>
     </div>
   </div>
 
@@ -406,6 +485,29 @@
     </div>
     <div class="spacer"></div>
     <span class="ctl-lbl" id="phase-lbl">PHASE — READY</span>
+  </div>
+
+  <!-- ================= EXPLAIN ROW ================= -->
+  <div class="grid2">
+    <div class="panel rev" style="animation-delay:1.15s">
+      <h3>HOW TO READ THIS <em>/ 10-second guide</em></h3>
+      <div class="xlist">
+        <div class="xrow"><span class="xm" style="color:#fff">☄</span><span class="xt"><b>White comet</b> — the agent's thought, travelling toward the line currently being checked.</span></div>
+        <div class="xrow"><span class="xm" style="color:var(--mint)">✦</span><span class="xt"><b>Mint star</b> — the kernel <b>accepted</b> that line: mathematically correct by construction.</span></div>
+        <div class="xrow"><span class="xm" style="color:var(--coral)">✕</span><span class="xt"><b>Coral star</b> — <b>rejected</b>: that tactic is demoted in the policy (watch the agent's bars shift).</span></div>
+        <div class="xrow"><span class="xm" style="color:var(--lav)">▮</span><span class="xt"><b>Agent bars</b> — live tactic probabilities for the current line; <span style="color:var(--gold)">★</span> marks the tactic the verifier actually needs.</span></div>
+        <div class="xrow"><span class="xm" style="color:var(--gold)">○</span><span class="xt"><b>Gold ring</b> — the kernel mid-check. All five stars mint = <b>proof verified → reward +1 → policy reinforced</b>.</span></div>
+      </div>
+    </div>
+    <div class="panel rev" style="animation-delay:1.25s">
+      <h3>WHAT THIS MODELS <em>/ real results, 2023–2025</em></h3>
+      <div class="rlist">
+        <div class="rrow"><div class="rn">FUNSEARCH <em>· Nature 625 (2023) — evolutionary program search</em></div><div class="rd">Cap-set construction of <b>512 points</b> in dim 8 (best known was 496); asymptotic lower bound 2.2180 → <b>2.2202</b>, the first improvement in 20 years.</div></div>
+        <div class="rrow"><div class="rn">ALPHAGEOMETRY 2 <em>· 2025 — LLM + symbolic deduction</em></div><div class="rd"><b>84%</b> of IMO geometry problems 2000–2024; IMO 2025 problem P2 solved in ~<b>19 s</b>.</div></div>
+        <div class="rrow"><div class="rn">ALPHAPROOF <em>· Nature 651 (2025) — RL inside the verifier</em></div><div class="rd">IMO 2024: <b>4/6 problems, 28/42 — silver medal</b>, with every proof machine-checked against 3 axioms.</div></div>
+        <div class="rrow"><div class="rn">DEEPSEEK-PROVER-V2 <em>· 2025 — RL + subgoal decomposition</em></div><div class="rd"><b>88.9%</b> on miniF2F · 49/658 PutnamBench.</div></div>
+      </div>
+    </div>
   </div>
 
   <!-- ================= PANELS ================= -->
@@ -713,6 +815,23 @@ function setHave(s){
   starEls[s].hv.textContent=HAVE[s];
   starEls[s].hv.setAttribute("class","shave ok");
 }
+function setPipeline(ph){
+  let base=0, mode="";
+  if(ph==="rest"){ base=1; }
+  else if(ph==="agent"){ base=2; }
+  else if(ph==="verify"){ base=3; }
+  else if(ph==="hold"){ base=4; mode="ok"; }
+  else if(ph==="return-ok"){ base=4; mode="ok"; }
+  else if(ph==="return-fail"){ base=4; mode="fail"; }
+  for(let i=1;i<=5;i++){
+    let cls="pstep";
+    const isBase=(i===base);
+    const isLearn=(mode!==""&&i===5);
+    if(isBase) cls+=" on"+(mode?(" "+mode):"");
+    else if(isLearn) cls+=" on"+(mode?(" "+mode):"");
+    document.getElementById("pipe-"+i).setAttribute("class",cls);
+  }
+}
 function renderStars(){
   for(let s=0;s<K;s++){
     let cls="spark";
@@ -741,6 +860,7 @@ function renderAgent(){
   }
   document.getElementById("ap-sub").textContent =
     (["agent","verify"].includes(phase)&&sampled>=0) ? `t = “${TACTICS[sampled]}” · sampled` : "sampling tactic …";
+  setPipeline(phase);
   // verifier check progress ring + bar
   const C=289;
   const off = phase==="verify" ? C*(1-Math.min(ticks/T_VERIFY,1)) : C;
